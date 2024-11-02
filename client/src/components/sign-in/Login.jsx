@@ -63,22 +63,24 @@ export default function Login() {
 
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center p-6 gap-4">
-      <div className="flex flex-col items-center gap-2">
-        <div className="text-center text-slate-900 font-bold text-5xl">
-          MyCalendar
+      <div className="w-[20rem] flex flex-col gap-2 border border-slate-200 rounded-md p-4 shadow-md">
+        <div className="flex flex-col items-center gap-2">
+          <div className="text-center text-slate-900 font-bold text-5xl">
+            MyCalendar
+          </div>
+          <div className="text-center font-extralight text-xl">
+            Log in to get started.
+          </div>
         </div>
-        <div className="text-center font-extralight text-xl">
-          Log in to get started.
+
+        {isSigningUp ? <SignUpForm onSubmit={handleSignUp} errorMsg={error} /> : <LogInForm onSubmit={handleLogin} errorMsg={error} />}
+
+        <div className="text-center">
+          {isSigningUp ? 
+          <p>Already have an account? <button className="text-green-500 underline" onClick={toggleForm}>Log in</button></p> : 
+          <p>Need an account? <button className="text-green-500 underline" onClick={toggleForm}>Sign up</button></p>
+          }
         </div>
-      </div>
-
-      {isSigningUp ? <SignUpForm onSubmit={handleSignUp} errorMsg={error} /> : <LogInForm onSubmit={handleLogin} errorMsg={error} />}
-
-      <div>
-        {isSigningUp ? 
-        <p>Already have an account? <button className="text-green-500 underline" onClick={toggleForm}>Log in</button></p> : 
-        <p>Need an account? <button className="text-green-500 underline" onClick={toggleForm}>Sign up</button></p>
-        }
       </div>
     </div>
   );

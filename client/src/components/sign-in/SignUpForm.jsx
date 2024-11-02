@@ -10,7 +10,6 @@ export default function SignUpForm({ onSubmit, errorMsg }) {
 
   return (
     <form 
-      className="w-[20rem] flex flex-col gap-2 border border-slate-200 rounded-md p-4 shadow-md"
       onSubmit={handleSubmit(onFormSubmit)}
     >
       <div className="text-center text-slate-800 font-medium text-3xl mb-1">
