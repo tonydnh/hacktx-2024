@@ -62,11 +62,11 @@ export default function Login() {
   }
 
   return (
-    <div className="w-screen h-screen flex flex-col justify-center items-center p-6 gap-4">
-      <div className="w-[20rem] flex flex-col gap-2 border border-slate-200 rounded-md p-4 shadow-md">
+    <div className="w-screen h-screen flex flex-col bg-cover justify-center items-center p-6 gap-4 bg-center bg-[url('https://img.freepik.com/free-vector/hand-painted-watercolour-background-with-leaf-design_1048-19186.jpg?t=st=1730588955~exp=1730592555~hmac=3756f92a5b7267e71ea3ff0b4ddb99f19da1687b9fd68571520fee293e9a20ad&w=826')]">
+      <div className="w-[20rem] flex flex-col gap-2 border border-slate-00 rounded-md p-4 shadow-md">
         <div className="flex flex-col items-center gap-2">
-          <div className="text-center text-slate-900 font-bold text-5xl">
-            MyCalendar
+          <div className="text-center text-green-700 font-bold text-5xl">
+            MyCalendar  
           </div>
           <div className="text-center font-extralight text-xl">
             Log in to get started.
@@ -77,8 +77,8 @@ export default function Login() {
 
         <div className="text-center">
           {isSigningUp ? 
-          <p>Already have an account? <button className="text-green-500 underline" onClick={toggleForm}>Log in</button></p> : 
-          <p>Need an account? <button className="text-green-500 underline" onClick={toggleForm}>Sign up</button></p>
+          <p>Already have an account? <button className="text-green-700 underline" onClick={toggleForm}>Log in</button></p> : 
+          <p>Need an account? <button className="text-green-700 underline" onClick={toggleForm}>Sign up</button></p>
           }
         </div>
       </div>
