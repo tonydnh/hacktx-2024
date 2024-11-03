@@ -10,6 +10,7 @@ import  {
   Route,
 } from 'react-router-dom';
 import Login from './components/sign-in/Login.jsx';
+import MyCalendar from './components/MyCalendar.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -24,6 +25,11 @@ createRoot(document.getElementById('root')).render(
           <Route element={<App />} path="/login">
             <Route index element={<Login />} />
           </Route>
+
+          <Route element={<App />} path="/calendar">
+            <Route index element={<MyCalendar />} />
+          </Route>
+
 
         </Routes>
       </BrowserRouter>
