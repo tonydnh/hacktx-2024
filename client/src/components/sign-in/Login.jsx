@@ -49,7 +49,7 @@ export default function Login() {
     } catch (err) {
       console.error("Error adding user to database: ", err);
     } finally {
-      navigate("/connect")
+      navigate("/calendar")
     }
   }
 
