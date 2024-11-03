@@ -10,21 +10,7 @@ const localizer = momentLocalizer(moment);
 
 const MyCalendar = () => {
   const [events, setEvents] = useState([
-    {
-      title: 'Board Meeting',
-      start: new Date(2024, 10, 5, 10, 0), // November is 10 in JS
-      end: new Date(2024, 10, 5, 12, 0),
-    },
-    {
-      title: 'Conference',
-      start: new Date(2024, 10, 6, 10, 0),
-      end: new Date(2024, 10, 6, 14, 0),
-    },
-    {
-      title: 'Team Lunch',
-      start: new Date(2024, 10, 7, 12, 0),
-      end: new Date(2024, 10, 7, 13, 0),
-    },
+
   ]);
 
   const onSelectEvent = (event) => {
